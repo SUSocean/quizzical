@@ -16,7 +16,7 @@ export default function App() {
   const [start, setStart] = React.useState({ screen: false, render: false })
 
   const fetchData = () => {
-    return fetch('https://opentdb.com/api.php?amount=5')
+    return fetch('https://opentdb.com/api.php?amount=5&category=9&difficulty=easy')
       .then(res => res.json())
       .then(data => data.results.map(ques => {
         return {
